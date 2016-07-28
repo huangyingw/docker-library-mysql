@@ -4,7 +4,6 @@ services:
     build: ./5.7/
     image: huangyingw/mysql
     network_mode: "host"
-    restart: always
     env_file: .env
     volumes:
       - ./var/log/:/var/log/
