@@ -1,0 +1,10 @@
+version: '2'
+services:
+  mysql:
+    build: ./5.7/
+    image: huangyingw/mysql
+    network_mode: "host"
+    restart: always
+    volumes:
+      - ./var/log/:/var/log/
+    command: /bin/sh -c "/run.sh > /var/log/containner.log 2>&1"
