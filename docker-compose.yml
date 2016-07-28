@@ -8,3 +8,4 @@ services:
     env_file: .env
     volumes:
       - ./var/log/:/var/log/
+      - ./var/lib/mysql/:/var/lib/mysql/
