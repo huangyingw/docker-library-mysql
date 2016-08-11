@@ -56,9 +56,8 @@ RUN sed -Ei 's/^(bind-address|log)/#&/' /etc/mysql/my.cnf \
 
 VOLUME /var/lib/mysql
 
-COPY docker-entrypoint.sh /usr/local/bin/
+COPY docker-entrypoint.sh /docker-entrypoint.sh
 COPY localdb-run.sh /localdb-run.sh
-RUN ln -s usr/local/bin/docker-entrypoint.sh /entrypoint.sh # backwards compat
 ENTRYPOINT ["/localdb-run.sh"]
 
 EXPOSE 3306

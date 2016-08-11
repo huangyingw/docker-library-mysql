@@ -11,4 +11,4 @@ groupmod -o -g $TARGET_GID mysql || true
 echo
 echo '* Starting MySQL'
 chown -R mysql:root /var/run/mysqld/
-/entrypoint.sh "$1"
+/docker-entrypoint.sh "$1"
