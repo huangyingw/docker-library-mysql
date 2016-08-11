@@ -6,6 +6,3 @@ services:
     network_mode: "host"
     restart: always
     env_file: .env
-    volumes:
-      - ./var/log/:/var/log/
-      - ./var/lib/mysql/:/var/lib/mysql/
