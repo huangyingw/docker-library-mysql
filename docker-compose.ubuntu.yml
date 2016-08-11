@@ -1,7 +1,8 @@
 version: '2'
 services:
   mysql:
-    build: ./5.7/
+    context: ./5.7/
+    dockerfile: Dockerfile-ubuntu
     image: huangyingw/mysql
     network_mode: "host"
     env_file: .env
