@@ -7,5 +7,6 @@ services:
         env_file:
             - ./env.list
         volumes:
-            - ./var/log/:/var/log/
             - ./var/lib/mysql/:/var/lib/mysql/
+            - ./var/log/:/var/log/
+            - /Users/huangyingw/Dropbox/myproject/git/work/TutorGroup/H2HDev/h2h-data/h2h-webapp/schema/MySQL/:/MySQL/
