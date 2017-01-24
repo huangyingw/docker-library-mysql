@@ -41,7 +41,7 @@ file_env() {
 }
 
 _check_config() {
-	toRun=( "$@" --verbose --help --log-bin-index="$(mktemp -u)" )
+	toRun=( "$@" --verbose --help )
 	if ! errors="$("${toRun[@]}" 2>&1 >/dev/null)"; then
 		cat >&2 <<-EOM
 
@@ -55,7 +55,7 @@ _check_config() {
 }
 
 _datadir() {
-	"$@" --verbose --help --log-bin-index="$(mktemp -u)" 2>/dev/null | awk '$1 == "datadir" { print $2; exit }'
+	"$@" --verbose --help 2>/dev/null | awk '$1 == "datadir" { print $2; exit }'
 }
 
 # allow the container to be started with `--user`
@@ -84,7 +84,7 @@ if [ "$1" = 'mysqld' -a -z "$wantHelp" ]; then
 		mkdir -p "$DATADIR"
 
 		echo 'Initializing database'
-		mysql_install_db --datadir="$DATADIR" --rpm --keep-my-cnf
+		"$@" --initialize-insecure
 		echo 'Database initialized'
 
 		"$@" --skip-networking --socket=/var/run/mysqld/mysqld.sock &

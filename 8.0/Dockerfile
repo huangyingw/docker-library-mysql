@@ -35,8 +35,8 @@ RUN set -ex; \
 	rm -r "$GNUPGHOME"; \
 	apt-key list > /dev/null
 
-ENV MYSQL_MAJOR 5.6
-ENV MYSQL_VERSION 5.6.35-1debian8
+ENV MYSQL_MAJOR 8.0
+ENV MYSQL_VERSION 8.0.0-dmr-1debian8
 
 RUN echo "deb http://repo.mysql.com/apt/debian/ jessie mysql-${MYSQL_MAJOR}" > /etc/apt/sources.list.d/mysql.list
 
@@ -56,7 +56,7 @@ RUN { \
 
 # comment out a few problematic configuration values
 # don't reverse lookup hostnames, they are usually another container
-RUN sed -Ei 's/^(bind-address|log)/#&/' /etc/mysql/my.cnf \
+RUN sed -Ei 's/^(bind-address|log)/#&/' /etc/mysql/mysql.conf.d/mysqld.cnf \
 	&& echo '[mysqld]\nskip-host-cache\nskip-name-resolve' > /etc/mysql/conf.d/docker.cnf
 
 VOLUME /var/lib/mysql
