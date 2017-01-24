@@ -1,8 +1,11 @@
 version: '2'
 services:
-  mysql:
-    build: ./5.7/
-    image: huangyingw/mysql
-    network_mode: "host"
-    restart: always
-    env_file: .env
+    mysql:
+        build: ./5.7/
+        image: huangyingw/mysql
+        network_mode: "host"
+        env_file:
+            - ./env.list
+        volumes:
+            - ./var/log/:/var/log/
+            - ./var/lib/mysql/:/var/lib/mysql/

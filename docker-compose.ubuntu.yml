@@ -1,0 +1,12 @@
+version: '2'
+services:
+  mysql:
+    build:
+      context: ./5.7/
+      dockerfile: Dockerfile-ubuntu
+    image: huangyingw/mysql
+    network_mode: "host"
+    env_file: .env
+    volumes:
+      - ./var/log/:/var/log/
+      - ./var/lib/mysql/:/var/lib/mysql/
