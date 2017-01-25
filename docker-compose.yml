@@ -1,12 +1,25 @@
-version: '2'
+version: '2.1'
 services:
     mysql:
         build: ./5.7/
         image: huangyingw/mysql
-        network_mode: "host"
+        networks:
+            app_net:
+                ipv4_address: 172.18.0.2
+        ports:
+            - "3306:3306"
         env_file:
             - ./env.list
         volumes:
             - ./var/lib/mysql/:/var/lib/mysql/
             - ./var/log/:/var/log/
             - /Users/huangyingw/Dropbox/myproject/git/work/TutorGroup/H2HDev/h2h-data/h2h-webapp/schema/MySQL/:/MySQL/
+
+networks:
+    app_net:
+        driver: bridge
+        ipam:
+            driver: default
+            config:
+            - subnet: 172.18.0.0/24
+              gateway: 172.18.0.1
