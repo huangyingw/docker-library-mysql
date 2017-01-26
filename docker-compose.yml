@@ -10,4 +10,3 @@ services:
         volumes:
             - ./var/lib/mysql/:/var/lib/mysql/
             - ./var/log/:/var/log/
-            - /Users/huangyingw/Dropbox/myproject/git/work/TutorGroup/H2HDev/h2h-data/h2h-webapp/schema/MySQL/:/MySQL/
