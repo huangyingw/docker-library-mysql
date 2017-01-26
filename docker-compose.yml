@@ -6,5 +6,4 @@ services:
         ports:
             - "3306:3306"
         volumes:
-            - ./var/lib/mysql/:/var/lib/mysql/
             - ./var/log/:/var/log/
