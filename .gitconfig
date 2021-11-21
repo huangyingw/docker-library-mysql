@@ -15,3 +15,5 @@
     ignore = ./docker-compose.ubuntu.yml
     ignore = ./docker-compose.yml
     ignore = ./env.list
+[push]
+    remote = origin
