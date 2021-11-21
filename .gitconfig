@@ -12,6 +12,7 @@
     target = docker-library/master
 [gdif]
     ignore = ./.env
+    ignore = ./5.7/*
     ignore = ./docker-compose.ubuntu.yml
     ignore = ./docker-compose.yml
     ignore = ./env.list
