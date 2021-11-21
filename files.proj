@@ -19,8 +19,6 @@
 "./do_update_proj.lck"
 "./docker-compose.ubuntu.yml"
 "./docker-compose.yml"
-"./docker-compose.yml.runresult"
-"./dockerfi.findresult.runresult"
 "./env.list"
 "./fav.log"
 "./fav.log.sort"
