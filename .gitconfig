@@ -1,15 +1,15 @@
-[remote "origin"]
+[remote "docker-library"]
 	url = https://github.com/docker-library/mysql.git
-	fetch = +refs/heads/*:refs/remotes/origin/*
+	fetch = +refs/heads/*:refs/remotes/docker-library/*
 [remote "github"]
 	url = git@github.com:Nabalot/mysql.git
 	fetch = +refs/heads/*:refs/remotes/github/*
-[remote "BareReps"]
-	url = /Users/huangyingw/BareReps/myproject/git/docker/mysql
-	fetch = +refs/heads/*:refs/remotes/dropbox/*
+[remote "origin"]
+	url = git@github.com:huangyingw/docker-library-mysql.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
 [gsync]
-    remote = origin
-    target = origin/master
+    remote = docker-library
+    target = docker-library/master
 [gdif]
     ignore = ./.env
     ignore = ./docker-compose.ubuntu.yml
