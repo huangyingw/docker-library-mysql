@@ -1,0 +1,12 @@
+[remote "origin"]
+	url = https://github.com/docker-library/mysql.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[remote "github"]
+	url = git@github.com:Nabalot/mysql.git
+	fetch = +refs/heads/*:refs/remotes/github/*
+[remote "BareReps"]
+	url = /Users/huangyingw/BareReps/myproject/git/docker/mysql
+	fetch = +refs/heads/*:refs/remotes/dropbox/*
+[gsync]
+    remote = origin
+    target = origin/master
