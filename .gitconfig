@@ -10,3 +10,8 @@
 [gsync]
     remote = origin
     target = origin/master
+[gdif]
+    ignore = ./.env
+    ignore = ./docker-compose.ubuntu.yml
+    ignore = ./docker-compose.yml
+    ignore = ./env.list
