@@ -1,0 +1,8 @@
+diff --git a/.gitignore b/.gitignore
+index d548f66..150d45d 100644
+--- ./.gitignore
++++ ./.gitignore
+@@ -1 +1,3 @@
++var/
++files.proj
+ .jq-template.awk
